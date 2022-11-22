@@ -3,9 +3,9 @@
 ## Descripcion
 
 ## Autores
--Rebecca Smith
--Luis Pedro Gonzalez
--Roberto Rios
+- Rebecca Smith
+- Luis Pedro Gonzalez
+- Roberto Rios
 ## Modulos y temas
 
 ### Gramaticas
