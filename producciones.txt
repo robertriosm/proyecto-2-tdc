@@ -1,0 +1,14 @@
+S -> A B
+B -> B C | V A | cooks | drinks | eats | cuts
+C -> P A
+A -> D N | he | she
+V -> cooks | drinks | eats | cuts
+P -> in | with
+N -> cat | dog | beer | cake | juice | meat | soup | fork | knife | oven | spoon
+D -> a | the
+
+
+NP = A
+VP = B
+PP = C
+Det = D
