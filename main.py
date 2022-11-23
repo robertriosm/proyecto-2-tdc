@@ -1,4 +1,5 @@
 from Gramatica import Gramatica
+from FuncionesLambda import *
 gram = Gramatica(
     V = {'S', 'A', 'B', 'C', 'V', 'P', 'N', 'D'}, 
     T = {'cooks', 'drinks', 'eats', 'cuts', 'he', 'she', 'in', 'with', 'cat', 'dog', 'beer', 'cake', 'juice', 'meat', 'soup', 'fork', 'knife', 'oven', 'spoon', 'a', 'the'}, 
@@ -14,15 +15,16 @@ gram = Gramatica(
         ('D', [(1, ['a', 'the'])], 1)
     ]) 
 exit = False
+inciso2= funcionesLambda()
 while not exit:
-    inpt = input('------Proyecto 2------\n1. Probar palabra en gramatica\n2. Inciso 2\n3. Salir\n')
+    inpt = input('------Proyecto 2------\n1. Probar palabra en gramatica\n2. Inciso funciones Lambda2\n3. Salir\n')
     if inpt == '1':
         w = input('Ingrese frase: ')
         ret = gram.testWord(w)
         print(('\nSi' if ret[0] else '\nNo') + f' pertenece al lenguaje de la gramatica.\nTiempo en simluación: {ret[1]}')
         input("\nEnter para regresar al menu principal...")
     elif inpt == '2':
-        pass
+        inciso2.funciones()
     elif inpt == '3': exit = True
     else:
         print("Ingrese una opción válida")
