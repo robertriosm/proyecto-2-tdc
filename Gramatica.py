@@ -1,3 +1,4 @@
+from time import time 
 
 class Gramatica ():
 
@@ -22,19 +23,16 @@ class Gramatica ():
         Args:
             w (_type_): frase que se testea pertenece a la gramatica
         """
-        def findTerminalProductions(productions):
-            for prod in productions[1]:
-                if prod[0]==1:
-                    return prod[1]
-            return []
 
         words = (lambda w : [word.lower() for word in w.split(' ') if not word=='']) (w)
         pyramid = {}
         #Revisa que este en termianles
+        start_simulation = time()
         for word in words: 
             if word not in self.T: 
-                return False
-        
+                return False,  time()-start_simulation
+        start_simulation = time()
+       
         step = 1
         start = 0
         end = start+1
@@ -74,4 +72,4 @@ class Gramatica ():
             if end==n:
                 start = 0
                 step += 1
-        return False if not pyramid.get(f'0-{n}') else self.S in pyramid.get(f'0-{n}')
+        return False if not pyramid.get(f'0-{n}') else self.S in pyramid.get(f'0-{n}'),  time()-start_simulation

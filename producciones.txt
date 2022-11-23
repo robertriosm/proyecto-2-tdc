@@ -7,7 +7,7 @@ P -> in | with
 N -> cat | dog | beer | cake | juice | meat | soup | fork | knife | oven | spoon
 D -> a | the
 
-
+----- Para evadir usar dos letras -------
 NP = A
 VP = B
 PP = C

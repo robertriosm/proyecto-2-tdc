@@ -13,4 +13,16 @@ gram = Gramatica(
         ('N', [(1, ['cat', 'dog', 'beer', 'cake', 'juice', 'meat', 'soup', 'fork', 'knife', 'oven', 'spoon'])], 1),
         ('D', [(1, ['a', 'the'])], 1)
     ]) 
-print(gram.testWord('She eats a cake with a fork'))
+exit = False
+while not exit:
+    inpt = input('------Proyecto 2------\n1. Probar palabra en gramatica\n2. Inciso 2\n3. Salir\n')
+    if inpt == '1':
+        w = input('Ingrese frase: ')
+        ret = gram.testWord(w)
+        print(('\nSi' if ret[0] else '\nNo') + f' pertenece al lenguaje de la gramatica.\nTiempo en simluación: {ret[1]}')
+        input("\nEnter para regresar al menu principal...")
+    elif inpt == '2':
+        pass
+    elif inpt == '3': exit = True
+    else:
+        print("Ingrese una opción válida")
