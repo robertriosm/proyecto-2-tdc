@@ -16,16 +16,6 @@ P = [
     ('B', [(1, ['b'])], 1),
 ]
 #Revisa que este en termianles
-cont = 0
-""" for n in range(len(words)+1):
-    start = i
-    end = i + n
-    section = words[start:end]
-    substrings = []            
-    for i in range(n):
-        for j in range(start+1, end):
-            substrings.append(((words[start:j], (start, j)), (words[j:end], (j, end)))) """
-
 step = 1
 start = 0
 end = start+1
